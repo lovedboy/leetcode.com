@@ -1,0 +1,13 @@
+*.log
+*.pot
+*.pyc
+*~
+*.swp
+*tmp
+*.ini
+*.pid
+*.txt
+.idea/*
+*DS_Store
+settings.py
+rundev.sh
