@@ -18,21 +18,25 @@ class Solution:
         pre = None
         cur = head
 
-        while cur:
+        while cur and cur.next:
 
-            if cur.next and cur.val == cur.next.val:
+            if cur.val == cur.next.val:
 
                 val = cur.val
 
-                while cur and cur.val != val:
+                while cur and cur.val == val:
                     cur = cur.next
-
-            if pre is None:
-                pre = cur
-                head = cur
+                
+                if pre is None:
+                    return self.deleteDuplicates(cur)
+                else:
+                    pre.next = self.deleteDuplicates(cur)
             else:
-                pre.next = cur
-
+                if pre is None:
+                    head = cur
+            
+                pre = cur
+                
             if cur:
                 cur = cur.next
 
