@@ -7,7 +7,10 @@
 *.ini
 *.pid
 *.txt
-.idea/*
 *DS_Store
 settings.py
 rundev.sh
+*.csv
+.idea/*
+tags
+cscope.*
