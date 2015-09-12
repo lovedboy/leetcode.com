@@ -18,14 +18,11 @@ class Solution(object):
 
         leaf = [root]
         while leaf:
-            tmp = []
-            for node in leaf:
-                node.left, node.right = node.right, node.left
-                if node.left:
-                    tmp.append(node.left)
-                if node.right:
-                    tmp.append(node.right)
-            leaf = tmp
-
+            node = leaf.pop(0)
+            node.left, node.right = node.right, node.left
+            if node.left:
+                leaf.append(node.left)
+            if node.right:
+                leaf.append(node.right)
         return root
 
