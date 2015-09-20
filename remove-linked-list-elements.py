@@ -13,11 +13,16 @@ class Solution(object):
         :type val: int
         :rtype: ListNode
         """
-        new_head = ListNode()
-        cur = new_head
-        while head:
-            if head.val != val:
-                cur.next = head
-                cur = cur.next
-            head = head.next
+        new_head = ListNode(0)
+        new_head.next = head
+        cur = head
+        pre = new_head
+        while cur:
+            if cur.val == val:
+                pre.next = cur.next
+            else:
+                pre.next  = cur
+                pre = cur
+            cur = cur.next
         return new_head.next
+                
