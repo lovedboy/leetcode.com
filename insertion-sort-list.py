@@ -50,7 +50,7 @@ def print_link_list(head):
 
 
 a1 = ListNode(1)
-a2 = ListNode(2)
+a2 = ListNode(1)
 a1.next = a2
 
 t = Solution().insertionSortList(a1)
