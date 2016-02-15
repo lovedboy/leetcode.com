@@ -31,8 +31,7 @@ class Solution(object):
         
         root = TreeNode(p1.val)
         root.right = self.sortedListToBST(p1.next)
-        if pre:
-            pre.next = None
+        pre.next = None
         root.left = self.sortedListToBST(head)
         return root
         
